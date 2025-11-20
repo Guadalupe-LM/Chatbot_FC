@@ -1,6 +1,6 @@
 from openai import OpenAI
 
-# ⚙️ Inicializa el cliente (toma la API Key desde variable de entorno OPENAI_API_KEY)
+# Inicializa el cliente (toma la API Key desde variable de entorno OPENAI_API_KEY)
 client = OpenAI()
 
 # Define tu prompt de sistema (se puede poner en otro archivo y leerlo si es muy largo)
@@ -55,7 +55,7 @@ def obtener_respuesta_moodle(question: str) -> str:
     # Extrae el contenido del mensaje
     return response.choices[0].message.content
 
-# Ejemplo de uso (puedes integrarlo con el frontend del chatbot en Moodle)
+# Ejemplo de uso (puede ser integrado con el frontend del chatbot en Moodle)
 if __name__ == "__main__":
     pregunta_estudiante = input("Escribe tu pregunta para el asistente: ")
     respuesta = obtener_respuesta_moodle(pregunta_estudiante)
